@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <link rel="stylesheet" href="style//index-header.css">
+    <link rel="stylesheet" href="style//about.css">
+    <link rel="stylesheet" href="style//index-else.css">
+
+
+</head>
+<body>
+  <header>        
+    <div class="header_h">
+        <div class="nav_main" id="NavMain">
+            <a href="index.html" aria-label="Home">
+                <img src="img/logo-main.png" alt="logo" height="60px">
+              </a>
+              
+            <nav class="pc">
+                <a href="detail.html">Services</a>
+                <a href="project_overview.html">Project Overview</a>
+                <a href="about_us.html">About Us</a>
+                <a href="contact_us.html">Contact Us</a>
+            </nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <nav class="mobile">
+                <a href="detail.html">Services</a>
+                <a href="project_overview.html">Project Overview</a>
+                <a href="about_us.html">About Us</a>
+                <a href="contact_us.html">Contact Us</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <!-- Hero Section -->
+    <section class="hero visible">
+        <h1>About Us</h1>
+    </section>
+
+
+    <!-- Team Section -->
+<div class="container mt-5" style="padding: 150px;">
+  <h3>서울여자대학교 데이터사이언스 학과</h3>
+  <div class="row justify-content-center team-section">
+
+    <!-- Team Member -->
+    <div class="col-md-4 text-center mb-4">
+      <div class="card custom-card" style="background-image: url('/img/윤아.png');">
+        <h5 class="card-title">김윤아</h5>
+        <div class="overlay">
+          <div class="card-body">
+            <div class="details">
+              <p>Email: <a href="mailto:rladbsdk08@swu.ac.kr">rladbsdk08@swu.ac.kr</a></p>
+              <p>SNS: <a href="https://instagram.com/yuna" target="_blank">@yuna</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4 text-center mb-4">
+      <div class="card custom-card" onclick="toggleDetails(this)" style="background-image: url('/img/유빈.png');">
+        <h5 class="card-title">김유빈</h5>
+        <div class="overlay">
+          <div class="card-body">
+            <div class="details">
+              <p>Email: <a href="mailto:kimyubin@swu.ac.kr">kimyubin@swu.ac.kr</a></p>
+              <p>SNS: <a href="https://instagram.com/yubin" target="_blank">@yubin</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center mb-4">
+      <div class="card custom-card" onclick="toggleDetails(this)" style="background-image: url('/img/지은.png');">
+        <h5 class="card-title">유지은</h5>
+        <div class="overlay">
+          <div class="card-body">
+            <div class="details">
+              <p>Email: <a href="mailto:jieun78925@swu.ac.kr">jieun78925@swu.ac.kr</a></p>
+              <p>SNS: <a href="https://instagram.com/jieun" target="_blank">@jieun</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4 text-center mb-4">
+      <div class="card custom-card" onclick="toggleDetails(this)" style="background-image: url('/img/윤아.png');">
+        <h5 class="card-title">이지수</h5>
+        <div class="overlay">
+          <div class="card-body">
+            <div class="details">
+              <p>Email: <a href="mailto:snskwltn@swu.ac.kr">snskwltn@swu.ac.kr</a></p>
+              <p>SNS: <a href="https://instagram.com/jisoo" target="_blank">@jisoo</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4 text-center mb-4">
+      <div class="card custom-card" onclick="toggleDetails(this)" style="background-image: url('/img/주현.png');">
+        <h5 class="card-title">최주현</h5>
+        <div class="overlay">
+          <div class="card-body">
+            <div class="details">
+              <p>Email: <a href="mailto:jjudyn99@swu.ac.kr">jjudyn99@swu.ac.kr</a></p>
+              <p>SNS: <a href="https://instagram.com/joohyun" target="_blank">@joohyun</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<footer class="cta">
+  <p>© 2024 Travel Influencer. All Rights Reserved.</p>
+</footer>
+
+
+    <button id="scrollToTopBtn" class="scroll-to-top" title="Go to top">↑</button>
+    <div id="overlay" class="dark-overlay"></div>
+
+    <script>
+      const NavMain = document.getElementById('NavMain');
+      const overlay = document.getElementById('overlay');
+
+      document.addEventListener('mousemove', (event) => {
+          if (event.clientY < 50) {
+              
+              NavMain.classList.add('show-nav_main');
+              overlay.style.display = 'block';  
+          } else {
+              
+              NavMain.classList.remove('show-nav_main');
+              overlay.style.display = 'none';  
+          }
+      });
+  </script>
+  <script>
+      const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+      window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+
+          scrollToTopBtn.style.display = 'block';
+      } else {
+
+          scrollToTopBtn.style.display = 'none';
+      }
+      });
+
+
+      scrollToTopBtn.addEventListener('click', () => {
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+              });
+      });
+  </script>
+
+<script>
+  function toggleMenu() {
+      const mobileMenu = document.querySelector('.nav_main nav.mobile');
+      mobileMenu.classList.toggle('show');
+    }
+</script>
+
+</body>
+</html>
