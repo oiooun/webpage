@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+/*overlay for header_nav*/
+.dark-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5; /* 어두운 오버레이가 네비게이션보다 아래에 위치 */
+    display: none;
+    transition: background-color 0.3s;
+}
+
+
+
+/*scroll-arrow design*/
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: none; /* 처음에는 숨김 상태 */
+}
+
+.scroll-to-top:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+
+
+/*footer design*/
+.f-cta {
+    padding: 20px;
+    text-align: center;
+    background-color: #F7F7F7;
+}
+
+.f-cta h2 {
+    font-size: 2rem;
+}
+
+.f-cta button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: black;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+    margin: 10px 10px;
+}
+
+.f-cta button:hover {
+    background-color: #f0f0f0;
+}
+
+/* 반응형 미디어 쿼리 */
+@media (max-width: 768px) {
+    .header-background {
+        height: calc(100vh - 60px);
+    }
+
+    .main-description h1 {
+        font-size: 2rem; /* 제목 크기 조정 */
+    }
+
+    .services-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .section-start-service {
+        flex-direction: column; /* 세로 정렬 */
+    }
+
+    .start-description, .start-map {
+        flex: 1 1 auto; /* 각 요소가 화면을 나눠 차지 */
+    }
+
+    .project-container {
+        flex-direction: column;
+    }
+
+    .icon-header {
+        flex-direction: row; /* 작은 화면에서 아이콘 수평 정렬 */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-description h1 {
+        font-size: 1.5rem; /* 제목 크기 더 줄임 */
+    }
+
+    .cta-btn {
+        font-size: 0.9rem;
+        padding: 8px 16px; /* 버튼 크기 줄임 */
+    }
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .nav_main nav.pc {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
+
+
+
+
+/* 전체 레이아웃 */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* 오른쪽 정보 패널 스타일 */
+/* 정보 패널 스타일 */
+#info-container {
+    font-family: 'NanumGothic', 'sans-serif';
+    background: rgba(76, 76, 76, 0.927);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    max-height: 500px;
+    margin: 1rem auto;
+} 
+
+
+
+#info-container h2 {
+
+    font-size: 1.8rem;
+    color: #ffffff;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+#info-container p {
+
+    font-size: 1rem;
+    color: #ffffff;
+    line-height: 1.5;
+    text-align: center;
+}
+
+#city-container h3 {
+
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* 도시 인플루언서 정보 스타일 */
+#city-influencer-container {
+    text-align: center;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+#city-influencer-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#city-influencer-name {
+    font-weight: bold;
+    margin-top: 0.5rem;
+    color: #333;
+    text-align: center;
+}
+
+#city-influencer-description {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+}
+
+/* 유튜브 링크 아이콘 스타일 */
+#city-influencer-youtube-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #ff0000;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+#city-influencer-youtube-link:hover {
+    transform: scale(1.1);
+}
+
+/* 버튼 스타일 */
+#region-link {
+    display: block;
+    margin: 1rem auto;
+    text-align: center;
+    color: #fff;
+    background-color: #415e9e;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#region-link:hover {
+    background-color: #9b9013;
+}

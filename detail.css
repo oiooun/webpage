@@ -1,0 +1,291 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header, footer {
+    background-color: #ffffff;
+    color: #333;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    align-items: flex-start; /* 상단 정렬 */
+    gap: 20px; /* 두 요소 간 간격 */
+}
+
+.regions {
+    flex: 0 0 200px; /* 고정 너비 */
+    min-width: 200px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.regions button {
+    width: 200px;
+    height: 50px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #278387;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.regions button:hover {
+    background-color: #368b7d;
+}
+
+.description {
+    flex: 2;
+    padding: 20px;
+    text-align: center; /* 가운데 정렬 추가 */
+}
+
+.description h2 {
+    font-size: 1.8rem;
+    color: #0073aa;
+}
+
+.description p {
+    line-height: 1.6;
+}
+
+.description img {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 반응형 웹 디자인 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .regions {
+        max-width: 100%;
+    }
+
+    .description {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .regions button {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+}
+
+.cta {
+    background-color: #e5e5e5;
+    color: black;
+    text-align: center;
+    padding: 10px 10px;
+    
+}
+
+.cta h2 {
+    font-size: 2rem;
+}
+
+.cta button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: black;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+    margin: 10px 10px;
+}
+
+.cta button:hover {
+    background-color: #f0f0f0;
+}
+
+.dark-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5; /* 어두운 오버레이가 네비게이션보다 아래에 위치 */
+    display: none;
+    transition: background-color 0.3s;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none; /* 처음에는 숨김 상태 */
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #555;
+    transform: scale(1.1); /* 살짝 커지는 효과 */
+}
+
+.nav_main {
+    position: fixed;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+
+    background-color: #f0f0f0;
+    color: black;
+    transition: top 0.3s ease;
+    
+    z-index: 10;
+
+}
+
+.nav_main nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav_main nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav_main nav a:hover {
+    text-decoration: underline;
+}
+
+.show-nav_main {
+    top: 0;
+}
+
+
+#subRegions {
+    flex: 1; /* 남은 공간을 차지하도록 설정 */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* 버튼 왼쪽 정렬 */
+    padding: 10px;
+}
+
+
+
+
+#subRegions button {
+    width: 150px; /* 버튼 너비 */
+    height: 40px; /* 버튼 높이 */
+    border: none;
+    border-radius: 1px;
+    border-color: 278387;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* 배경색과 크기 변화 효과 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
+}
+
+#subRegions button:hover {
+    background-color: #27828757; /* 호버 시 배경색 */
+    transform: scale(1.05); /* 호버 시 살짝 커지는 효과 */
+}
+
+#subRegions button:active {
+    background-color: #97c4d6; /* 클릭 시 배경색 */
+    transform: scale(0.95); /* 클릭 시 살짝 작아지는 효과 */
+}
+
+
+/* Hero Section */
+.hero {
+    height: 40vh;
+    background: url('bgimg4.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.influencer {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    max-width: 100%; /* 컨테이너의 최대 너비를 유지 */
+    box-sizing: border-box; /* 패딩과 테두리를 포함한 크기 계산 */
+    word-wrap: break-word; /* 긴 단어 줄바꿈 */
+    overflow: hidden; /* 넘치는 콘텐츠 숨기기 */
+}
+
+.influencer img {
+    flex-shrink: 0; /* 이미지가 줄어들지 않도록 설정 */
+    width: 100px; /* 이미지 고정 너비 */
+    height: 100px; /* 정사각형 유지 */
+    border-radius: 50%; /* 이미지를 동그랗게 만듦 */
+    object-fit: cover; /* 이미지 비율 유지하면서 잘림 방지 */
+}
+
+
+.influencer div {
+    flex: 1; /* 남은 공간을 차지 */
+    min-width: 0; /* 줄바꿈을 허용하도록 설정 */
+}
+
+.influencer p, .influencer a {
+    margin: 0; /* 기본 여백 제거 */
+    overflow: hidden; /* 넘치는 텍스트 숨기기 */
+    text-overflow: ellipsis; /* 넘치는 텍스트에 "..." 표시 */
+    white-space: normal; /* 여러 줄 허용 */
+    word-break: break-word; /* 긴 단어 줄바꿈 */
+}

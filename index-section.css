@@ -1,0 +1,208 @@
+
+
+/*start design*/
+.section-start-service {
+    display: flex;
+}
+
+.Area {
+    padding: 50px;
+
+    display: flex; /* Flexbox로 레이아웃 설정 */
+    flex-direction: column;
+    gap: 20px; /* SVG와 정보 패널 사이 간격 */
+    justify-content: center; /* 왼쪽 정렬 */
+    align-items: center; /* 수직 정렬 */
+  }
+  
+  /* SVG 컨테이너 */
+  .Svg {
+    flex-shrink: 0; /* SVG 크기를 고정 */
+  }
+  
+  
+  .map-region:hover path {
+      fill: #033159;
+      cursor: pointer;
+  }
+  
+  .map-region:hover text {
+      font-weight: bold; /* 글자 두껍게 */
+      fill: #ffffff; /* 텍스트 색상 변경 */
+  }
+  
+  
+ 
+
+/* 도시 버튼 스타일 */
+.city-button {
+  background:  #513162;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.city-button:hover {
+  background-color: #432154;
+  transform: translateY(-3px);
+}
+
+.city-button:active {
+  background-color: #740aacb9;
+  transform: translateY(0);
+}
+
+
+
+/* 인플루언서 정보 */
+.city-influencer-container {
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out 0.6s forwards;
+}
+
+.city-influencer-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #3498db;
+  margin-bottom: 12px;
+}
+
+.city-influencer-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 6px;
+}
+
+.city-influencer-description {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-bottom: 10px;
+}
+
+.city-influencer-youtube-link svg {
+  width: 32px;
+  height: 32px;
+  fill: #e74c3c;
+  transition: transform 0.3s;
+}
+
+.city-influencer-youtube-link:hover svg {
+  transform: scale(1.2);
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      transform: translateY(20px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+
+  
+.influencer-title {
+  font-family: 'Roboto', sans-serif; /* 세련된 폰트 */
+  font-size: 1.5rem; /* 적당한 크기 */
+  font-weight: 700; /* 볼드 처리 */
+  color: #2c3e50; /* 차분한 네이비 컬러 */
+  text-align: center; /* 중앙 정렬 */
+  letter-spacing: 1px; /* 글자 간격 조정 */
+  background: linear-gradient(to right, #3498db, #8e44ad); /* 그라디언트 효과 */
+  -webkit-background-clip: text; /* 배경을 텍스트에만 적용 */
+  -webkit-text-fill-color: transparent; /* 텍스트 색상 투명화 */
+  margin: 20px 0; /* 위아래 여백 추가 */
+}
+
+
+
+
+/*featured design*/
+.cta-btn {
+    padding: 10px 20px;
+    background-color: #9ccfff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+
+
+/*project design*/
+.featured-project {
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.project-info {
+    max-width: 500px;
+}
+
+.project-info h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.project-info p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+#info-container {
+  width: 400px; /* 고정된 가로 크기 */
+  height: 600px; /* 고정된 세로 크기 */
+  overflow: auto; /* 내용이 넘칠 경우 스크롤 생성 */
+  border: 2px solid #ccc; /* 테두리 설정 */
+  border-radius: 10px; /* 둥근 모서리 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+  padding: 20px; /* 내부 여백 */
+  background-color: #819bba; /* 배경 색상 */
+}
+
+
+.Svg-and-buttons {
+  background-image: url('TI-logo.png'); /* 배경 이미지 경로 */
+  background-size: 60%; /* 이미지가 영역에 맞게 꽉 차도록 */
+  background-repeat: no-repeat; /* 이미지 반복 금지 */
+  background-position: center; /* 이미지 가운데 정렬 */
+}
