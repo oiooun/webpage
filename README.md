@@ -1,5 +1,7 @@
-🇰🇷 README (한글)
+🇰🇷 README
+
 도시별 인플루언서 추천 시스템
+
 이 프로젝트는 인구가 줄어드는 지역의 관계인구를 다시 활성화하기 위해 만든 인플루언서 매칭 시스템을 기반으로 한 웹페이지입니다. 간단히 말해서, 각 지역의 관광 자원과 관련된 키워드를 분석해서, 그 지역을 잘 홍보할 수 있는 유튜브 여행 인플루언서를 추천해줍니다.
 
 🔍 소개
@@ -27,8 +29,10 @@
 📚 참고 논문
 김윤아 외, 인구감소 지역의 관계인구 활성화를 위한 텍스트 데이터 기반 인플루언서 매칭 시스템, 서울여자대학교 데이터사이언스학과, 2024.
 
-🇺🇸 README (English)
+🇺🇸 README 
+
 Regional Influencer Recommendation System
+
 So, this project is basically a web application that comes from research on how to match influencers to help revitalize relationship populations in areas where the population is declining. Pretty interesting, right?
 
 It digs into local tourism keywords and finds YouTube travel influencers who are a great fit for promoting those areas effectively.
